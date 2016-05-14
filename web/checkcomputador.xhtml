@@ -23,18 +23,18 @@
 				<p:accordionPanel>
 					<c:forEach begin="1" end="#{check.totalVerComputador}" var="n">
 						<!-- for de 1 a totalVerComputador e colocar na variavel n -->
+							
 						<p:tab title="#{check.getVerComputador(n).nome}">
 							<p:outputPanel style="text-align: center">
+							<p:selectBooleanCheckbox>
+										<p:ajax listener="#{check.selecionarComputador(n)}" />
+									</p:selectBooleanCheckbox>
+									
 								<div align="center">
-									<h:outputText value="#{check.getVerComputador(n).informacao}" />
+									]]<h:outputText value="#{check.getVerComputador(n).informacao}" />
 									<p />
-									<p:commandButton value="Pedir Ajuda"
-										onclick="PF('confirmMessage').show();"
-										action="#{check.selecionarComputador(n)}">
-									</p:commandButton>
 									<p:dialog header="INFO" widgetVar="confirmMessage"
 										showEffect="pop">
-										<h:outputText value="Solução solicitada!" />
 										<p:commandButton value="OK"
 											onclick="PF('confirmMessage').hide()">
 										</p:commandButton>
@@ -46,8 +46,7 @@
 				</p:accordionPanel>
 			</h:form>
 			<h:form id="frmFinalizar">
-				<p:button value="Finalizar"
-					outcome="solucaogeral.ifba" />
+				<p:button value="Finalizar" outcome="solucaogeral.ifba" />
 			</h:form>
 
 		</pm:content>
