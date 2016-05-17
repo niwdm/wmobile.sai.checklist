@@ -19,35 +19,32 @@
 		<pm:header title="Checklist Verificação" />
 		<pm:content>
 			<h:form id="frmChecklist">
+				<p:panel header="ATENÇÃO">
+					<h:outputText
+						value="Todos os quesitos devem ser verificados. Selecione os itens que não foram cumpridos!" />
+				</p:panel>
 
-				<p:accordionPanel>
-					<c:forEach begin="1" end="#{check.totalVerFormatacao}" var="n">
-						<!-- for de 1 a totalVerComputador e colocar na variavel n -->
-						<p:tab title="#{check.getVerFormatacao(n).nome}">
-							<p:outputPanel style="text-align: center">
-								<div align="center">
-									<h:outputText value="#{check.getVerFormatacao(n).informacao}" />
-									<p />
-									<p:commandButton value="Pedir Ajuda"
-										onclick="PF('confirmMessage').show();"
-										action="#{check.selecionarFormatacao(n)}">
-									</p:commandButton>
-									<p:dialog header="INFO" widgetVar="confirmMessage"
-										showEffect="pop">
-										<h:outputText value="Solução solicitada!" />
-										<p:commandButton value="OK"
-											onclick="PF('confirmMessage').hide()">
-										</p:commandButton>
-									</p:dialog>
-								</div>
-							</p:outputPanel>
-						</p:tab>
-					</c:forEach>
-				</p:accordionPanel>
+				<c:forEach begin="1" end="#{check.totalVerFormatacao}" var="n">
+					<!-- for de 1 a totalVerFormatacao e colocar na variavel n -->
+					<p:panel header="#{check.getVerFormatacao(n).nome}"
+						toggleable="true">
+						<h:panelGrid columns="2" style="margin-bottom:10px"
+							cellpadding="20">
+							<p:selectBooleanCheckbox>
+								<p:ajax listener="#{check.selecionarFormatacao(n)}" />
+							</p:selectBooleanCheckbox>
+							<h:outputText value="#{check.getVerFormatacao(n).informacao}" />
+						</h:panelGrid>
+
+
+					</p:panel>
+				</c:forEach>
 			</h:form>
 			<h:form id="frmFinalizar">
-				<p:button value="Finalizar"
-					outcome="solucaogeral.ifba" />
+				<h:panelGrid columns="2" cellpadding="50">
+					<p:commandButton value="Voltar" action="opcoesverificacao.ifba" />
+					<p:commandButton value="Finalizar" action="solucaogeral.ifba" />
+				</h:panelGrid>
 			</h:form>
 
 		</pm:content>
@@ -55,5 +52,4 @@
 	</pm:page>
 
 </h:body>
-
 </html>

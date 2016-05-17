@@ -19,10 +19,18 @@
 		<pm:header title="Checklist Verificação" />
 		<pm:content>
 			<h:form id="frmChecklist">
-			
-				<p:button value="Verificação de Computador" outcome="checkcomputador.ifba"/>
-				<p:button value="Verificação de Formatação" outcome="checkformatacao.ifba"/>
 
+				<p:commandButton value="Verificação de Computador"
+					action="checkcomputador.ifba" />
+				<p:commandButton value="Verificação de Formatação"
+					action="checkformatacao.ifba" />
+
+			</h:form>
+
+			<h:form id="frmFinalizar">
+				<h:panelGrid columns="2" cellpadding="50">
+					<p:commandButton value="Sair" action="inicio.ifba" />
+				</h:panelGrid>
 			</h:form>
 
 		</pm:content>

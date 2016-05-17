@@ -27,72 +27,6 @@ import br.edu.mobile.wmobile.sai.checklist.formatacao.RestaurarBackup;
 @SessionScoped
 public class Checklist {
 
-	private boolean value0, value1, value2, value3, value4, value5, value6, value7;
-
-	public boolean isValue0() {
-		return value0;
-	}
-
-	public void setValue0(boolean value0) {
-		this.value0 = value0;
-	}
-
-	public boolean isValue1() {
-		return value1;
-	}
-
-	public void setValue1(boolean value1) {
-		this.value1 = value1;
-	}
-
-	public boolean isValue2() {
-		return value2;
-	}
-
-	public void setValue2(boolean value2) {
-		this.value2 = value2;
-	}
-
-	public boolean isValue3() {
-		return value3;
-	}
-
-	public void setValue3(boolean value3) {
-		this.value3 = value3;
-	}
-
-	public boolean isValue4() {
-		return value4;
-	}
-
-	public void setValue4(boolean value4) {
-		this.value4 = value4;
-	}
-
-	public boolean isValue5() {
-		return value5;
-	}
-
-	public void setValue5(boolean value5) {
-		this.value5 = value5;
-	}
-
-	public boolean isValue6() {
-		return value6;
-	}
-
-	public void setValue6(boolean value6) {
-		this.value6 = value6;
-	}
-
-	public boolean isValue7() {
-		return value7;
-	}
-
-	public void setValue7(boolean value7) {
-		this.value7 = value7;
-	}
-
 	private String email = "";
 
 	public String getEmail() {
@@ -102,6 +36,17 @@ public class Checklist {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	private String senha = "";
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 
 	private String solucaoGeral = "";
 
@@ -186,7 +131,7 @@ public class Checklist {
 	public void setLimparSolucaoGeral() {
 		this.solucaoGeral = "";
 	}
-
+	
 	public void selecionarComputador(int numero) {
 		System.out.println("Selecionado " + getVerComputador(numero).getNome());
 		solucaoGeral = solucaoGeral + getVerComputador(numero).getSolucao();

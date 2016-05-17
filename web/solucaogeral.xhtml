@@ -22,7 +22,12 @@
 				<p:outputLabel value="Atenção:" />
 				<p />
 				<h:outputText id="resultadoChecklist" value="#{check.solucaoGeral}" />
-				<p:commandButton value="Sair" action="inicio.ifba" />
+			</h:form>
+			<h:form id="frmFinalizar">
+				<h:panelGrid columns="2" cellpadding="50">
+					<p:commandButton value="Voltar"	action="opcoesverificacao.ifba" />
+					<p:commandButton value="Sair" action="inicio.ifba" />
+				</h:panelGrid>
 			</h:form>
 		</pm:content>
 
