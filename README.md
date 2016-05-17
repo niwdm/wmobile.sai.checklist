@@ -1,4 +1,4 @@
-# wmobile.sai.helpdesk
+# wmobile.sai.checklist
 Projeto apresentado como requisito parcial para obtenção de aprovação na disciplina Programação Móvel, no Curso de BSI, no IFBA de Vitória da Conquista.<br>
 
 Sobre o projeto: O SAI.Checklist (Sistemas de Apoio ao Ifba) Checklist é uma de três aplicações desenvolvidas para auxiliar os funcionáiros do Ifba.<br>
