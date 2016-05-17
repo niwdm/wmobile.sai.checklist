@@ -3,7 +3,7 @@ Projeto apresentado como requisito parcial para obtenção de aprovação na dis
 
 Sobre o projeto: O SAI.Checklist (Sistemas de Apoio ao Ifba) Checklist é uma de três aplicações desenvolvidas para auxiliar os funcionáiros do Ifba.<br>
 
-Linguagens, tecnologias e padrões: Desenvolvido em JAVA EE, utilizando as tecnologias TOMCAT 8.0, JSF Mojarra 2.2 e utilizando o padrão decorador.<br>
+Linguagens, tecnologias e padrões: Desenvolvido em JAVA EE, utilizando as tecnologias TOMCAT 8.0, JSF Mojarra 2.2, PrimeFaces 5.1 e utilizando o padrão de projeto decorador.<br>
 
 Demais aplicativos do SAI:<br>
 SAI.Helpdesk:<br>
